@@ -1,3 +1,13 @@
+# ~/.profile: executed by the command interpreter for login shells.
+# This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login
+# exists.
+# see /usr/share/doc/bash/examples/startup-files for examples.
+# the files are located in the bash-doc package.
+
+# the default umask is set in /etc/profile; for setting the umask
+# for ssh logins, install and configure the libpam-umask package.
+#umask 022
+
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
@@ -42,3 +52,18 @@ fi
 
 export VISUAL="nvim"
 export LESS="--mouse"
+
+export ORAS_CACHE=~/.oras/cache
+
+# Added to support pyenv
+if [ -d "$HOME/.pyenv" ] ; then
+    export PYENV_ROOT="$HOME/.pyenv"
+    command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+    eval "$(pyenv init -)"
+fi
+
+# Added to support muon-cli repository
+export PATH="$PATH:$HOME/bin/muon-cli/commands"
+
+# Added to support muon-mono repository
+export PATH="$PATH:$HOME/.local/gcc-arm-none-eabi-10.3-2021.10/bin"
