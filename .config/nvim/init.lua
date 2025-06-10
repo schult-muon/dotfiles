@@ -58,8 +58,8 @@ vim.keymap.set("v", "<leader>s", ":sort i<cr>", { noremap=true })
 -- [d    " vim.diagnostic.goto_prev()
 vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { noremap=true })
 vim.keymap.set("n", "<F10>", ":LspClangdSwitchSourceHeader<cr>", { noremap=true, silent=true })
--- gd    " vim.lsp.buf.definition()
--- gD    " vim.lsp.buf.declaration() ???
+vim.keymap.set("n", "gd", vim.lsp.buf.definition, { noremap=true })
+vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { noremap=true })
 -- grr   " vim.lsp.buf.references()
 -- grn   " vim.lsp.buf.rename()
 --
