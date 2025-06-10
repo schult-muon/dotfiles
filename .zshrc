@@ -63,8 +63,12 @@ else
     PS2="%1_> "
 fi
 
-
 #===================
 # Dotfile management
 
 alias config='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
+
+#===================
+# Utility
+
+alias xargs='xargs '  # Allow expansion of aliases in xargs
