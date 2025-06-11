@@ -49,7 +49,7 @@ if [[ "$terminfo[colors]" -ge 8 ]]; then
 
     # Use color in ls
     alias ls="ls --color=auto" # Linux
-    # export CLICOLOR=1 # macOS
+    export CLICOLOR=1 # macOS
 
     # Use color in completions
     zstyle ':completion:*' list-colors "${LS_COLORS}"
