@@ -1,0 +1,9 @@
+[user]
+	name = Steven Schulteis
+	email = schult@gmail.com
+[pull]
+	ff = only
+[init]
+	defaultBranch = main
+[core]
+	excludesfile = /Users/schult/.gitignore
