@@ -24,8 +24,17 @@ unsetopt glob_dots
 #===================
 # Completion
 
-autoload -U compinit
+autoload -U +X compinit
 compinit
+
+# Makefile target completion
+# https://gitgist.com/posts/makefile-zsh-completion-guide/
+function _makefile_targets {
+    local -a targets
+    targets=($(command make -qp 2>/dev/null | awk -F':' '/^[a-zA-Z0-9][^$#\/\t=]*:([^=]|$)/ && !/^Makefile/ {split($1,A,/ /);for(i in A)print A[i]}' | sort -u))
+    compadd $targets
+}
+compdef _makefile_targets make
 
 # Case-insensitive completion
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
