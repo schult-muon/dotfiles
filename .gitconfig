@@ -5,6 +5,7 @@
 	ff = only
 [init]
 	defaultBranch = main
+	templateDir = /home/steven-schulteis/.git-template
 [core]
 	excludesfile = /Users/schult/.gitignore
 	pager = DELTA_FEATURES=$([ "$COLUMNS" -gt 180 ] && echo +side-by-side) delta
