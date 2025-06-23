@@ -86,6 +86,7 @@ vim.keymap.set("n", "<leader>f", ":lua vim.lsp.buf.format({async = true})<cr>", 
 -- create a symlink to it in your project root
 vim.lsp.enable('clangd')
 
+vim.lsp.enable('cmake')
 vim.lsp.enable('pyright')
 vim.lsp.enable('rust_analyzer')
 
