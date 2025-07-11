@@ -43,3 +43,4 @@ if [ -d "$HOME/Documents/Projects/pico-sdk" ] ; then
 fi
 
 export VISUAL="nvim"
+export LESS="--mouse"

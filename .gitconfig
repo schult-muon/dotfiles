@@ -7,6 +7,14 @@
 	defaultBranch = main
 [core]
 	excludesfile = /Users/schult/.gitignore
+	pager = DELTA_FEATURES=$([ "$COLUMNS" -gt 180 ] && echo +side-by-side) delta
 [alias]
 	adog = log --all --decorate --oneline --graph
 	dog = log --decorate --oneline --graph
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	line-numbers = true
+	navigate = true
+[merge]
+	conflictStyle = zdiff3
