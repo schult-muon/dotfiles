@@ -64,7 +64,6 @@ if [[ "$terminfo[colors]" -ge 8 ]]; then
     zstyle ':completion:*' list-colors "${LS_COLORS}"
 
     # Use color in grep
-    export GREP_COLOR='mt=01;35'
     alias grep="grep --color"
 else
     PS1="%n@%m%# "
