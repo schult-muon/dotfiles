@@ -17,4 +17,4 @@
 	line-numbers = true
 	navigate = true
 [merge]
-	conflictStyle = zdiff3
+	conflictStyle = diff3
