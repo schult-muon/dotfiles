@@ -19,3 +19,8 @@
 	navigate = true
 [merge]
 	conflictStyle = diff3
+	tool = meld
+[diff]
+	tool = meld
+[difftool]
+	prompt = false
