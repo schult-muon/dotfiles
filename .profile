@@ -67,3 +67,19 @@ export PATH="$PATH:$HOME/bin/muon-cli/commands"
 
 # Added to support muon-mono repository
 export PATH="$PATH:$HOME/.local/gcc-arm-none-eabi-10.3-2021.10/bin"
+export PATH="$PATH:$HOME/.local/aarch64--glibc--bleeding-edge-2020.02-2/bin"
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+case ":$PATH:" in
+    *:/home/steven-schulteis/.juliaup/bin:*)
+        ;;
+
+    *)
+        export PATH=/home/steven-schulteis/.juliaup/bin${PATH:+:${PATH}}
+        ;;
+esac
+
+# <<< juliaup initialize <<<
