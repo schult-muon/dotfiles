@@ -2,7 +2,7 @@ vim.cmd("filetype on")
 vim.cmd("filetype indent off")
 
 vim.cmd.colorscheme('desert')
--- vim.api.nvim_set_hl(0, "ColorColumn", { bg="darkgray" })
+vim.api.nvim_set_hl(0, "ColorColumn", { bg="gray16" })
 
 vim.g.mapleader = " "
 
